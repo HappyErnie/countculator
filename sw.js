@@ -1,4 +1,4 @@
-var cacheName = 'calci-cache';
+var cacheName = 'countculator-cache';
 var cacheAssets = [
 	'/index.html',
 	'/style.css',
@@ -44,7 +44,7 @@ self.addEventListener('activate', e => {
 })
 
 
-var cacheName = 'calci-cache';
+var cacheName = 'countculator-cache';
 
 // Call Fetch Event
 self.addEventListener('fetch', e => {

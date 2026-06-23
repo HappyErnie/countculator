@@ -1,10 +1,10 @@
 {
-    "name": "Calculator",
-    "short_name": "Calci",
+    "name": "Countculator",
+    "short_name": "Countculator",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#fff",
-    "description": "Notse Calculator App .",
+    "description": "A Calculator App",
     "icons": [
       {
         "src": "./icons/icon-512.png",
