@@ -65,11 +65,16 @@ buttons.forEach((btn) => {
     })
 })
 
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker
-      .register("./sw.js")
-      .then((reg) => console.log("service Worker: registered"))
-      .catch((err) => console.log(`service worker; Error:${err}`));
-  });
+if (navigator.serviceWorker) {
+    // Start registration process on every page load
+    window.addEventListener('load', () => {
+        navigator.serviceWorker
+            // The register function takes as argument
+            // the file path to the worker's file
+            .register('./sw.js')
+            // Gives us registration object
+            .then(reg => console.log('Service Worker Registered'))
+            .catch(swErr => console.log(
+                  `Service Worker Installation Error: ${swErr}}`));
+      });
 }

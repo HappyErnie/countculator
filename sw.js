@@ -1,40 +1,72 @@
-const cacheName = "countculator-cache"; //the name of our cache
-const cacheAsset = ["index.html", "style.css", "main.js"]; //this is the asset that we want to cache
+var cacheName = 'countculator-cache';
+var cacheAssets = [
+	'/index.html',
+	'/style.css',
+	'/script.js',
 
-self.addEventListener("install", (e) => {
-  console.log("service worker installed");
+];
 
-  e.waitUntil(
-    caches
-      .open(cacheName)
-      .then((cache) => {
-        console.log("service worker: caching files");
-        cache.addAll(cacheAsset);
-      })
-      .then(() => self.skipWaiting())
-  );
-});
+// Call install Event
+self.addEventListener('install', e => {
+	// Wait until promise is finished
+	e.waitUntil(
+		caches.open(cacheName)
+		.then(cache => {
+			console.log(`Service Worker: Caching Files: ${cache}`);
+			cache.addAll(cacheAssets)
+				// When everything is set
+				.then(() => self.skipWaiting())
+		})
+	);
+})
 
-self.addEventListener("activate", (e) => {
-  console.log("service worker activated");
 
-//removing unwanted caches
-  e.waitUntil(
-    caches.keys().then((cacheName) => {
-      return Promise.all(
-        cacheName.map((cache) => {
-          if (cache !== cacheName) {
-            console.log("Service worker: clear old caches");
-            return caches.delete(cache);
-          }
-        })
-      );
-    })
-  );
-});
+// Call Activate Event
+self.addEventListener('activate', e => {
+	console.log('Service Worker: Activated');
+	// Clean up old caches by looping through all of the
+	// caches and deleting any old caches or caches that
+	// are not defined in the list
+	e.waitUntil(
+		caches.keys().then(cacheNames => {
+			return Promise.all(
+				cacheNames.map(
+					cache => {
+						if (cache !== cacheName) {
+							console.log('Service Worker: Clearing Old Cache');
+							return caches.delete(cache);
+						}
+					}
+				)
+			)
+		})
+	);
+})
 
-self.addEventListener("fetch", (e) => {
-  console.log("service worker: fetching");
-  //checking if the live site is avaialble and if not, responsd with the cache site
-  e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
+
+var cacheName = 'calci-cache';
+
+// Call Fetch Event
+self.addEventListener('fetch', e => {
+	console.log('Service Worker: Fetching');
+	e.respondWith(
+		fetch(e.request)
+		.then(res => {
+			// The response is a stream and in order the browser
+			// to consume the response and in the same time the
+			// cache consuming the response it needs to be
+			// cloned in order to have two streams.
+			const resClone = res.clone();
+			// Open cache
+			caches.open(cacheName)
+				.then(cache => {
+					// Add response to cache
+					cache.put(e.request, resClone);
+				});
+			return res;
+		}).catch(
+			err => caches.match(e.request)
+			.then(res => res)
+		)
+	);
 });
