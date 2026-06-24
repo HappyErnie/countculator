@@ -1,6 +1,6 @@
 {
-  "name": "countculator",
-  "short_name": "countculator",
+  "name": "Countculator",
+  "short_name": "Countculator",
   "theme_color": "#fff",
   "background_color": "#fff",
   "display": "standalone",
