@@ -93,3 +93,12 @@ button:active {
     display: none !important;
   }
 }
+
+/* Targets any disabled input, textarea, or button */
+input:disabled, 
+textarea:disabled, 
+button:disabled {
+    color: #ffffff !important;           /* Forces text to white */
+    -webkit-text-fill-color: #ffffff;    /* Required for Safari / iOS Safari */
+    opacity: 1;                          /* Prevents the browser from fading the text */
+}
