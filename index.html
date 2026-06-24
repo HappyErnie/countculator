@@ -16,9 +16,9 @@
 </head>
 <body id="calculator">
     <!-- Credit Author @Notse github.com/notse -->
-        <a href="https://www.youtube.com/@halfacuberernie" target="_blank"><header class="youtube-logo">@HalfaCuberErnie<i class="fab fa-youtube"></i></header></a>
+        <!-- <a href="https://www.youtube.com/@halfacuberernie" target="_blank"><header class="youtube-logo">@HalfaCuberErnie<i class="fab fa-youtube"></i></header></a> -->
             <!-- Display Numbers -->
-            <input id="display" type="text" placeholder="0" value="0" disabled>
+            <input id="display" type="text" placeholder="0" value="0" onpaste="return false;" ondrop="return false;" autocomplete="off" disabled>
             <!-- keypad -->
                 <div id="keypad" class="disable-dbl-tap-zoom">
                     <button onclick="resetEntry()">CE</button>
