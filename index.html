@@ -1,49 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countculator</title>
-    <!-- link Files -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Countculator</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+        <link rel="manifest" href="manifest.json" />
+    </head>
 
-    <link rel="manifest" href="./manifest.webmanifest">
-</head>
-<body id="calculator">
-    <!-- Credit: Author @Notse github.com/notse -->
-        <a href="https://github.com/HappyErnie" target="_blank"><header class="github-logo">HappyErnie <i class="fab fa-github"></i></header></a>
-            <!-- Display Numbers -->
-            <input id="display" type="text" placeholder="0" value="0">
-            <!-- keypad -->
-                <div id="keypad" class="disable-dbl-tap-zoom">
-                    <button onclick="resetEntry()">CE</button>
-                    <button onclick="reset()" id="Clear">C</button>
-                    <button onclick="removeCharacter()">
-                        <i class="fas fa-backspace"></i>
-                    </button>
-                    <button onclick="operators('/')" class="Special">/</button>
-                    <button onclick="display('7')">7</button>
-                    <button onclick="display('8')">8</button>
-                    <button onclick="display('9')" >9</button>
-                    <button onclick="operators('*')" class="Special">x</button>
-                    <button onclick="display('4')">4</button>
-                    <button onclick="display('5')">5</button>
-                    <button onclick="display('6')">6</button>
-                    <button onclick="operators('-')" class="Special">-</button>
-                    <button onclick="display('1')">1</button>
-                    <button onclick="display('2')">2</button>
-                    <button onclick="display('3')">3</button>
-                    <button onclick="operators('+')" class="Special">+</button>
-                    <button onclick="operators('+/-')">&#177;</button>
-                    <button onclick="display('0')">0</button>
-                    <button onclick="operators('.')">.</button>
-                    <button onclick="calculate()" id="equal">=</button>
-                </div>
-</body>
-    <script src="script.js"></script>
+    <body>
+        <div class="container">
+            <section id="Display-area">
+                <div class="currentInput"></div>
+                <div class="answerScreen">0</div>
+            </section>
+            <section class="keypad-btns">
+                <button type="button" class="fun_btn" id="clear" value="">
+                    C
+                </button>
+                <button type="button" class="fun_btn" id="erase" value="">
+                    &#11013;
+                </button>
+                <button type="button" class="fun_btn" value="/">/</button>
+                <button type="button" class="fun_btn" value="%">%</button>
+                <button type="button" class="num_btn" value="7">7</button>
+                <button type="button" class="num_btn" value="8">8</button>
+                <button type="button" class="num_btn" value="9">9</button>
+                <button type="button" class="fun_btn" value="*">x</button>
+                <button type="button" class="num_btn" value="4">4</button>
+                <button type="button" class="num_btn" value="5">5</button>
+                <button type="button" class="num_btn" value="6">6</button>
+                <button type="button" class="fun_btn" value="-">-</button>
+                <button type="button" class="num_btn" value="1">1</button>
+                <button type="button" class="num_btn" value="2">2</button>
+                <button type="button" class="num_btn" value="3">3</button>
+                <button type="button" class="fun_btn" value="+">+</button>
+                <button type="button" class="num_btn" value="00">00</button>
+                <button type="button" class="num_btn" value="0">0</button>
+                <button type="button" class="num_btn" value=".">.</button>
+                <button type="button" class="fun_btn" id="evaluate" value="">=</button>
+            </section>
+        </div>
+    </body>
 </html>
