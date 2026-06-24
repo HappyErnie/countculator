@@ -1,84 +1,95 @@
 * {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #f5f5f5;
-    min-height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: whitesmoke;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
 }
 
-.container {
-    background-color: #131313;
-    max-width: 300px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 25px 35px;
-    border-radius: 10px;
-    user-select: none;
+header {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 0 50px 50px 0;
+  position: fixed;
+  top: 0;
+  left: -140px;
+  background-color: teal;
+  font-size: 1.5em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: whitesmoke;
+  font-size: 1.5em;
+  transition: all 350ms linear;
+  cursor: pointer;
 }
 
-#Display-area {
-    width: 100%;
-    margin: 3vh 0;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(2, minmax(40px, auto));
-    word-wrap: break-word;
-    padding-bottom: 20px;
-    border-bottom: 1px rgba(128, 128, 128, 0.116) solid;
+i {
+  font-size: 50px;
+  margin-left: 10px;
 }
 
-#Display-area .currentInput {
-    /* display: flex; */
-    text-align: right;
-    height: 8vh;
-    color: white;
-    font-size: xx-large;
-    line-height: 2;
-    word-wrap: break-word;
+header:hover {
+  left: 0px;
 }
 
-#Display-area .answerScreen {
-    text-align: right;
-    color: rgba(150, 150, 150, 0.87);
-    height: 7px;
-    line-height: 3;
-    font-size: larger;
+button {
+  font-size: 8vmin;
+  background: transparent;
+  border: none;
+  color: white;
 }
 
-.keypad-btns {
-    display: grid;
-    grid: repeat(5, 70px) / repeat(4, 70px);
-    grid-row-gap: 20px;
-    grid-column-gap: 20px;
+button:active {
+  background: rgba(255, 255, 255, 0.3);
 }
 
-.keypad-btns button {
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    background-color: #131313;
-    color: white;
-    font-size: x-large;
+#display {
+  background-color: #444;
+  height: 30vh;
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: right;
+  font-size: 18vmin;
+  padding: 15px;
+  caret-color: #09ddc1;
+  color: whitesmoke;
 }
 
-.keypad-btns .fun_btn {
-    color: #ff8800;
+#display::-webkit-inner-spin-button,
+#display::-webkit-inner-spin-button {
+  appearance: none;
 }
 
-.num_btn:hover,.fun_btn:hover {
-    background-color: rgba(29, 29, 29, 0.979);
+#keypad {
+  height: 70vh;
+  background-color: #333;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#equal,
+#clear {
+  color: rgb(1, 133, 116);
+}
+
+.Special {
+  background-color: #018574;
+}
+
+.Special:active {
+  background-color: rgb(92, 199, 185, 0.8);
+}
+
+.disable-dbl-tap-zoom {
+  touch-action: manipulation;
 }
 
 @media only screen and (max-width: 700px) {
-    body {
-        background-color: #131313;
-        align-items: flex-start;
-    }
+  .github-logo {
+    display: none !important;
+  }
 }
