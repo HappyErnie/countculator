@@ -57,6 +57,10 @@ button:active {
   padding: 15px;
   caret-color: #09ddc1;
   color: whitesmoke;
+
+  /* clamp(MIN_SIZE, DYNAMIC_IDEAL_SIZE, MAX_SIZE) */
+  font-size: clamp(1rem, 4vw, 2.5rem); 
+  width: 100%;
 }
 
 #display::-webkit-inner-spin-button,
@@ -88,17 +92,17 @@ button:active {
   touch-action: manipulation;
 }
 
-@media only screen and (max-width: 700px) {
+/* @media only screen and (max-width: 700px) {
   .github-logo {
     display: none !important;
   }
-}
+} */
 
 /* Targets any disabled input, textarea, or button */
-input:disabled, 
+/* input:disabled, 
 textarea:disabled, 
 button:disabled {
     color: #ffffff !important;           /* Forces text to white */
-    -webkit-text-fill-color: #ffffff;    /* Required for Safari / iOS Safari */
-    opacity: 1;                          /* Prevents the browser from fading the text */
-}
+/*    -webkit-text-fill-color: #ffffff;    /* Required for Safari / iOS Safari */
+/*    opacity: 1;                            /* Prevents the browser from fading the text */
+/*} */ 
