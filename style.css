@@ -42,7 +42,6 @@ button {
   background: transparent;
   border: none;
   color: white;
-  /*outline-offset: 2px;*/
 }
 
 button:active {
@@ -107,12 +106,3 @@ C CE BACK Buttons: #BA2933 (red)
     display: none !important;
   }
 } */
-
-/* Targets any disabled input, textarea, or button */
-/* input:disabled, 
-textarea:disabled, 
-button:disabled {
-    color: #ffffff !important;           /* Forces text to white */
-/*    -webkit-text-fill-color: #ffffff;    /* Required for Safari / iOS Safari */
-/*    opacity: 1;                            /* Prevents the browser from fading the text */
-/*} */ 
