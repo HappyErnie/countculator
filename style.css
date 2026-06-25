@@ -42,8 +42,6 @@ button {
   background: transparent;
   border: none;
   color: white;
-  padding: 15px 40px;
-  outline: 2px solid #01D6D4;
   /*outline-offset: 2px;*/
 }
 
@@ -60,11 +58,7 @@ button:active {
   border: none;
   text-align: right;
   font-size: 14vmin;
-  /*padding: 15px;*/
-  
-  padding: 15px 40px;
-  outline: 10px solid #01D6D4;
-  
+  padding: 15px;
   caret-color: #09ddc1;
   /*color: whitesmoke;*/
   color: #000000
@@ -88,9 +82,7 @@ button:active {
 }*/
 
 .Special {
-  background-color: transparent;
-  padding: 15px 40px;
-  outline: 2px solid #01D6D4;
+  background-color: #018574;
 }
 
 .Special:active {
