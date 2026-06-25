@@ -60,7 +60,11 @@ button:active {
   border: none;
   text-align: right;
   font-size: 14vmin;
-  padding: 15px;
+  /*padding: 15px;*/
+  
+  padding: 15px 40px;
+  outline: 10px solid #01D6D4;
+  
   caret-color: #09ddc1;
   /*color: whitesmoke;*/
   color: #000000
