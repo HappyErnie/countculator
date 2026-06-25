@@ -53,14 +53,10 @@ button:active {
   outline: none;
   border: none;
   text-align: right;
-  font-size: 18vmin;
+  font-size: 12vmin;
   padding: 15px;
   caret-color: #09ddc1;
   color: whitesmoke;
-
-  /* clamp(MIN_SIZE, DYNAMIC_IDEAL_SIZE, MAX_SIZE) */
-  font-size: clamp(1rem, 4vw, 2.5rem); 
-  width: 100%;
 }
 
 #display::-webkit-inner-spin-button,
