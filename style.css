@@ -3,10 +3,12 @@
 }
 
 body {
-  background: whitesmoke;
-  margin: 0;
+  /*background: whitesmoke;*/
+  background: #01D6D4;
+  /*margin: 0;*/
+  margin: 60;
   font-family: "Roboto", sans-serif;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 /* header {
@@ -47,7 +49,8 @@ button:active {
 }
 
 #display {
-  background-color: #444;
+  /*background-color: #444;*/
+  background-color: #FFFFFF;
   height: 30vh;
   width: 100%;
   outline: none;
@@ -56,7 +59,8 @@ button:active {
   font-size: 14vmin;
   padding: 15px;
   caret-color: #09ddc1;
-  color: whitesmoke;
+  /*color: whitesmoke;*/
+  color: #000000
 }
 
 #display::-webkit-inner-spin-button,
