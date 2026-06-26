@@ -35,6 +35,8 @@ i {
   height: 70vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 8px;
 }
 
 .disable-dbl-tap-zoom {
