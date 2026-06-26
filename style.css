@@ -53,8 +53,8 @@ body {
   /*height: 70vh;*/
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2px;
-  padding: 2px;
+  gap: 8px;
+  padding: 8px;
 }
 
 button {
