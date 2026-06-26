@@ -58,3 +58,7 @@ button:active, .Special-Brown:active, .Special-Purple:active, .Special-Red:activ
   filter: brightness(130%); /* Makes the color 30% brighter */
   transform: scale(0.98);   /* Adds a physical 'depressed' feel */
 }
+
+.disable-dbl-tap-zoom {
+  touch-action: manipulation;
+}
