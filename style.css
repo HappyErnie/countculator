@@ -1,3 +1,7 @@
+html, body {
+  touch-action: none;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -83,7 +87,6 @@ button:active, .Special-Brown:active, .Special-Purple:active, .Special-Red:activ
   transform: scale(0.98);   /* Adds a physical 'depressed' feel */
 }
 
-.disable-dbl-tap-zoom {
-  /*touch-action: manipulation;*/
+/*.disable-dbl-tap-zoom {
   touch-action: none;
-}
+}*/
