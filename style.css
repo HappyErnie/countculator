@@ -1,6 +1,6 @@
-html, body {
+/*html, body {
     touch-action: manipulation;
-}
+}*/
 
 body {
   display: flex;
@@ -22,7 +22,7 @@ body {
   background-color: #ffffff;
   color: #1A1A1A;
   text-align: right;
-  font-size: 90px;
+  font-size: 40px;
   border: none;
   outline: none;
   width: 100%;
