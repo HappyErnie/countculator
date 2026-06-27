@@ -13,6 +13,19 @@ body {
   max-width: 400px;
 }
 
+.main-title {
+  font-family: 'Bungee', sans-serif;
+  font-size: 3rem;
+  color: #e76f51; /* Burnt orange */
+  text-align: center;
+  letter-spacing: 2px;
+  
+  /* Vintage 3D layered shadow effect */
+  text-shadow: 
+    3px 3px 0px #2a9d8f, /* Teal layer */
+    6px 6px 0px #264653; /* Dark slate layer */
+}
+
 #equation {
   background-color: #ffffff;
   color: #232323;
