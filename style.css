@@ -1,7 +1,3 @@
-/*html, body {
-    touch-action: manipulation;
-}*/
-
 body {
   display: flex;
   justify-content: center;
@@ -17,8 +13,18 @@ body {
   max-width: 400px;
 }
 
+#equation {
+  background-color: #ffffff;
+  color: #232323;
+  text-align: right;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 #display {
-  /*background-color: #01D6D4;*/
   background-color: #ffffff;
   color: #1A1A1A;
   text-align: right;

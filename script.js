@@ -4,6 +4,7 @@ const MathOperators = ['+', '-', '*', '/'];
 let IsReset = true;
 let CheckSymbol = true;
 let Display = document.getElementById('display');
+let Equation = document.getElementById('equation');
 
 Display.addEventListener("input", (e) => {
     validateState();
@@ -20,6 +21,7 @@ Display.addEventListener("input", (e) => {
 function validateState() {
     if (Display.value === "") {
         Display.value = 0;
+        Equation.value = "";
         IsReset = true;
         console.log(`${IsReset}`);
     }
@@ -145,6 +147,7 @@ function calculate() {
         compute = Display.value;
         let result = eval(compute);
         let roundResult = Math.round(result * 100000000) / 100000000; // 8 percision
+        Equation.value = compute;
         Display.value = roundResult;
         validateState();
     } catch (err) {
@@ -155,6 +158,7 @@ function calculate() {
 }
 
 function reset() {
+    Equation.value = "";
     Display.value = 0;
     CheckSymbol = true;
     IsReset = true;
