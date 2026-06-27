@@ -65,5 +65,6 @@ button:active, .Special-Brown:active, .Special-Purple:active, .Special-Red:activ
 }
 
 .disable-dbl-tap-zoom {
-  touch-action: manipulation;
+  /*touch-action: manipulation;*/
+  touch-action: none;
 }
