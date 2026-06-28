@@ -1,3 +1,20 @@
+/* 1. Define the font locally using the downloaded file */
+@font-face {
+    font-family: 'LocalAudiowide';
+    src: url('Audiowide-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply the font to the body and force inheritance on interactive elements */
+/*body, 
+input, 
+button, 
+select, 
+textarea {
+    font-family: 'LocalAudiowide', sans-serif !important;
+}*/
+
 html, body {
   touch-action: none;
 }
@@ -10,7 +27,6 @@ body {
 }
 
 #countculator {
-  font-family: Arial, Helvetica, sans-serif;
   background-color: #01D6D4;
   padding: 20px 5px 0px 5px;
   width: 400px;
@@ -18,14 +34,12 @@ body {
 }
 
 .main-title {
-  /*font-family: 'Bungee', sans-serif;*/
-  font-family: Arial, Helvetica, sans-serif;
-  /*font-weight: 700; /* 700 is standard bold */
-  font-size: 2.5rem;
+ /* Apply the font and provide a fallback like sans-serif */
+  font-family: 'LocalAudiowide', sans-serif !important;
+  font-size: 2.3rem;
   color: #E9650B; 
   text-align: center;
   letter-spacing: 1px;
-  
   /* Vintage 3D layered shadow effect */
   /*text-shadow: 
     3px 3px 0px #2a9d8f, /* Teal layer */
@@ -88,7 +102,3 @@ button:active, .Special-Brown:active, .Special-Purple:active, .Special-Red:activ
   filter: brightness(130%); /* Makes the color 30% brighter */
   transform: scale(0.98);   /* Adds a physical 'depressed' feel */
 }
-
-/*.disable-dbl-tap-zoom {
-  touch-action: none;
-}*/
