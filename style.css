@@ -19,15 +19,15 @@ body {
 
 .main-title {
   font-family: 'Bungee', sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #E9650B; 
   text-align: center;
   letter-spacing: 2px;
   
   /* Vintage 3D layered shadow effect */
-  text-shadow: 
+  /*text-shadow: 
     3px 3px 0px #2a9d8f, /* Teal layer */
-    6px 6px 0px #264653; /* Dark slate layer */
+    /*6px 6px 0px #264653; /* Dark slate layer */
 }
 
 #equation {
