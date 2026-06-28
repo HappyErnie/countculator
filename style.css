@@ -28,7 +28,7 @@ body {
 
 #countculator {
   background-color: #01D6D4;
-  padding: 20px 5px 0px 5px;
+  padding: 30px 5px 0px 5px;
   width: 400px;
   max-width: 400px;
 }
@@ -37,7 +37,7 @@ body {
  /* Apply the font and provide a fallback like sans-serif */
   font-family: 'LocalAudiowide', sans-serif !important;
   font-size: 2.3rem;
-  color: #E9650B; 
+  color: #954880; 
   text-align: center;
   letter-spacing: 1px;
   /* Vintage 3D layered shadow effect */
